@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div id="container">
+            <nav>
+                <img src="images/logo.jpg" class="logo" alt="Logo">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Full Stack Developer</p>
+                <h1>Hi, I'm <span>Hemanth</span><br>R from India</h1>
+            </div>
+        </div>
+    </div>    
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/User1.jpg" alt="Hemanth">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I am a passionate Full Stack Developer with 
+                        a strong foundation in both front-end and back-end technologies.
+                         With a keen eye for detail and a deep understanding of
+                          how web applications function from top to bottom, I love creating
+                           efficient, scalable, and visually appealing solutions
+                            that solve real-world problems.</p>
+                    
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('talents')">Talents</p>
+                        <p class="tab-links" onclick="opentab('expertise')">Expertise</p> 
+                    </div>
+                    <div class="tab-contents active-tab" id="experience">
+                        <ul>
+                           <li><span>Full Stack Development</span><br>Creating Web Applications</li>
+                           <li><span>Python</span><br>Web Development</li>
+                           <li><span>Java</span><br>Mobile Development</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="talents">
+                        <ul>
+                           <li><span>Creative Problem-Solving</span><br>Examples of solving complex issues</li>
+                           <li><span>Effective Communication</span><br>Experience in team and client communication</li>
+                           <li><span>Adaptability</span><br>Ability to quickly learn and adapt to new technologies</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="expertise">
+                        <ul>
+                           <li><span>Full-Stack Development</span><br>Proficient in both front-end and back-end technologies</li>
+                           <li><span>Data Analysis</span><br>Expertise in analyzing and visualizing data</li>
+                           <li><span>Mobile Development</span><br>Experience in building Android/iOS apps</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (var tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (var tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
