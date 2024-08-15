@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <h1>My Gallery</h1> 
+
+    <div class="full-img" id="fullImgBox">
+        <img src="images/img1.jpg" id="fullImg"> 
+        <span onclick="closeFullImg()">X</span>
+    </div>
+    
+    <div class="img-gallery">
+        <img src="images/img1.jpg" alt="Image 1" onclick="openFullImg(this.src)"> 
+        <img src="images/img2.jpg" alt="Image 2" onclick="openFullImg(this.src)">
+        <img src="images/img3.jpg" alt="Image 3" onclick="openFullImg(this.src)">
+        <img src="images/img4.jpg" alt="Image 4" onclick="openFullImg(this.src)">
+        <img src="images/img5.jpg" alt="Image 5" onclick="openFullImg(this.src)">
+        <img src="images/img6.jpg" alt="Image 6" onclick="openFullImg(this.src)">
+        <img src="images/img7.jpg" alt="Image 7" onclick="openFullImg(this.src)">
+        <img src="images/img8.jpg" alt="Image 8" onclick="openFullImg(this.src)">
+    </div>
+    
+   <script>
+    var fullImgBox = document.getElementById("fullImgBox");
+    var fullImg = document.getElementById("fullImg");
+
+    function openFullImg(pic){
+        fullImgBox.style.display = "flex";
+        fullImg.src = pic;
+    }
+
+    function closeFullImg(){
+        fullImgBox.style.display = "none";
+    }
+   </script>
+    
+</body>
+</html>
