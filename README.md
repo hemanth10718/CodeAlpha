@@ -1,4 +1,4 @@
-# Front-End Development Projects
+# Front-End Developer Projects
 
 Welcome to my Front-End Developer Projects repository! This collection of projects showcases various tasks that demonstrate my skills in HTML, CSS, and JavaScript. Below, you'll find descriptions and instructions for each project.
 
